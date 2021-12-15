@@ -29,7 +29,6 @@ snake[0] = {
 };
 
 //apply Event Listener and hand it to function Direction.
-
 document.addEventListener("keydown", Direction);
 
 let dir;
@@ -52,7 +51,7 @@ function EatSnakeTail(head , arr){
         if(head.x == arr[i].x && head.y == arr[i].y  ){
             //stop game
             clearInterval(game);
-            alert("Ви мертві. Зроблено в легкому режимі");
+            alert("You are dead");
             ctx.fillStyle = "red";
         }    
     }
@@ -124,7 +123,7 @@ function DrawGameProcess(){
         death = true;
         //stop game
         clearInterval(game);
-        alert(" Ти мертвий . Зроблено в легкому режимі");
+        alert("Ви мертві. Зроблено в звичайному режимі.");
         
         
     }
@@ -157,4 +156,4 @@ function DrawGameProcess(){
 }
 
 //Render game each 100 mili seconds
-let game = setInterval(DrawGameProcess ,200);
+let game = setInterval(DrawGameProcess ,100);
